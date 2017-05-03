@@ -1,0 +1,52 @@
+#onegoogbar .gb_df {
+    height: 30px;
+}
+
+#onegoogbar .gb_df>.gb_R {
+	height: 30px;
+	line-height: 28px;
+}
+
+/*profile avatar*/
+#onegoogbar .gb_9a {
+	-webkit-background-size: 20px 20px;
+	background-size: 20px 20px;
+	height: 20px;
+	width: 20px;
+	margin: 5px;
+}
+
+#onegoogbar #gbq2 {
+	padding-top: 0;
+}
+
+/*search bar*/
+#onegoogbar .gbqfqw {
+	height: 24px;
+	margin-top: 3px;
+}
+
+/*search bar caret*/
+#onegoogbar .asb-i {
+   margin: 7px 0;
+}
+
+
+/*search button*/
+#onegoogbar #gbqfb {
+	height: 24px;
+	margin-top: 3px;
+}
+
+/*search button glyph*/
+#onegoogbar .gbqfi {
+	height: 24px;
+	width: 24px;
+	margin-top: -4px;
+	margin-left: -4px;
+}
+
+#onegoogbar .gb_3b .gb_5b {
+	height: 27px;
+}
+

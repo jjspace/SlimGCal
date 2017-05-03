@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "Slim gCal",
+	"version": "1.0",
+
+	"description": "An extension to clean up the gCal interface and make the calendar more of a focus",
+
+	"page_action": {
+		"default_title": "Slim gCal"
+	},
+
+	"author": "jjspace",
+
+	"content_scripts": [
+		{
+			"matches": ["https://calendar.google.com/*"],
+			"js": ["load.js"],
+			"css":[
+					"onegoogbar.css", 
+					"vr-nav.css",
+					"sidebar.css",
+					"maincell.css"
+			]
+		}
+	],
+
+	"web_accessible_resources": [
+		"gCal.js"
+	]
+}

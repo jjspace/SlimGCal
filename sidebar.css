@@ -1,0 +1,44 @@
+#calcontent.eui-s #mothertable #nav {
+	margin-left: 30px;
+}
+
+#calcontent.eui-s #mothertable #nav.hidden {
+	margin-left: -150px;
+}
+
+/*terms and privacy*/
+#mothertable #navfooter {
+	display: none;
+}
+
+#mothertable #navfooter.active {
+	display: block;
+}
+
+
+/*sidebar toggle button*/
+#sidebar-toggle {
+	position: absolute;
+	left: 106%;
+	z-index: 1;
+	top: 3px;
+}
+
+#sidebar-toggle button {
+	background: #f2f2f2;
+	border: 1px solid #f3f3f3;
+	border-radius: 2px;
+	color: #444;
+}
+#sidebar-toggle button:focus {
+	outline: none;
+}
+
+#sidebar-toggle button div {
+	transform: rotate(0deg);
+	-webkit-transition: all .218s;
+}
+
+#nav.hidden #sidebar-toggle button div {
+	transform: rotate(180deg);
+}
