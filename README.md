@@ -7,3 +7,4 @@ The biggest improvement, in my opinion, is that you can now hide the google cale
 * New Icon
 * Clean and Condense css
 * Make sure js is optimal
+* change caret to pure css using borders
