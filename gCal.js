@@ -30,7 +30,7 @@ function createSidebarToggle() {
 	let toggle = document.createElement("div")
 	let toggleButton = document.createElement("button");
 	let arrow = document.createElement("div")
-	arrow.append(document.createTextNode(">"))
+	arrow.className = "caret";
 	toggle.id = "sidebar-toggle"
 	toggleButton.onclick = toggleSidebar
 	toggleButton.append(arrow)

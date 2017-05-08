@@ -1,8 +1,8 @@
-#calcontent.eui-s #mothertable #nav {
+#calcontent #mothertable #nav {
 	margin-left: 30px;
 }
 
-#calcontent.eui-s #mothertable #nav.hidden {
+#calcontent #mothertable #nav.hidden {
 	margin-left: -150px;
 }
 
@@ -29,16 +29,29 @@
 	border: 1px solid #f3f3f3;
 	border-radius: 2px;
 	color: #444;
+	cursor: pointer;
 }
 #sidebar-toggle button:focus {
 	outline: none;
 }
 
 #sidebar-toggle button div {
+	margin: 2px;
 	transform: rotate(0deg);
 	-webkit-transition: all .218s;
 }
 
 #nav.hidden #sidebar-toggle button div {
-	transform: rotate(180deg);
+	transform: rotate(-180deg);
+}
+
+/*arrow left*/
+.caret {
+	width: 0;
+	height: 0;
+	border-top: solid transparent;
+	border-bottom: solid transparent;
+
+	border-right: solid black;
+	border-width: 5px;
 }
