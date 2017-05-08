@@ -1,15 +1,28 @@
 console.log('Simple gCal Loaded');
 
+function showSidebar() {
+	let sidebar = document.getElementById('nav');
+	let calendar = document.getElementById('mainbody');
+	sidebar.classList.remove('hidden');
+	calendar.classList.remove('expanded');
+}
+
+function hideSidebar() {
+	let sidebar = document.getElementById('nav');
+	let calendar = document.getElementById('mainbody');
+	sidebar.classList.add('hidden');
+	calendar.classList.add('expanded');
+}
+
 function toggleSidebar() {
-	let sidebar = document.getElementById("nav");
-	let calendar = document.getElementById("mainbody");
+	let sidebar = document.getElementById('nav');
 	if (sidebar.classList.contains("hidden")) {
-    	sidebar.classList.remove("hidden");
-		calendar.classList.remove("expanded");
+		//is already hidden
+		showSidebar();
 	}
 	else {
-	    sidebar.classList.add("hidden");
-		calendar.classList.add("expanded");
+		//not hidden
+		hideSidebar();
 	}
 }
 
@@ -25,6 +38,13 @@ function createSidebarToggle() {
 	document.getElementById("nav").append(toggle)
 }
 
+function createEventListeners() {
+	document.getElementById('maincell').addEventListener('click', hideSidebar);
+	document.getElementById('vr-nav').addEventListener('click', hideSidebar);
+
+}
+
 createSidebarToggle();
-toggleSidebar();
+hideSidebar();
+createEventListeners();
 
