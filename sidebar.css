@@ -23,6 +23,9 @@
 	z-index: 1;
 	top: 3px;
 }
+#nav.hidden #sidebar-toggle {
+	left: 100%;
+}
 
 #sidebar-toggle button {
 	background: #f2f2f2;
