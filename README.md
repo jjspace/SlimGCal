@@ -7,6 +7,6 @@ To build css use `sass --watch stylesheets/:.`
 
 ### TODO:
 * New Icon
-* Clean and Condense css
+* ~~Clean and Condense css~~
 * Make sure js is optimal
 * ~~change caret to pure css using borders~~
