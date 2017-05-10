@@ -16,10 +16,7 @@
 			"matches": ["https://calendar.google.com/*"],
 			"js": ["load.js"],
 			"css":[
-					"onegoogbar.css", 
-					"vr-nav.css",
-					"sidebar.css",
-					"maincell.css"
+					"main.css" 
 			]
 		}
 	],

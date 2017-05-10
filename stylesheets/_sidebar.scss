@@ -1,0 +1,53 @@
+#calcontent #mothertable {
+    #nav {
+        margin-left: 30px;
+        &.hidden {
+            margin-left: -150px;
+        }
+    }
+    /*terms and privacy*/
+    #navfooter {
+        display: none;
+        &.active {
+            display:block;
+        }
+    }
+}
+
+#sidebar-toggle {
+    position: absolute;
+    left: 106%;
+    z-index: 1;
+    top: 3px;
+    #nav.hidden & {
+        left: 100%;
+    }
+    button {
+        background: #f2f2f2;
+        border: 1px solid #f3f3f3;
+        border-radius: 2px;
+        color: #444;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        .caret {
+            margin: 2px;
+            transform: rotate(0deg);
+            -webkit-transition: all .218s;
+            #nav.hidden & {
+              transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+/*arrow left*/
+.caret {
+    width: 0;
+    height: 0;
+    border-top: solid transparent;
+    border-bottom: solid transparent;
+    border-right: solid black;
+    border-width: 5px;
+}

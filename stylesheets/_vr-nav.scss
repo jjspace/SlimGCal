@@ -1,0 +1,20 @@
+#calmaster #vr-nav {
+    padding: 0 0 3px;
+    margin: 4px 0 0;
+    #mainnav {
+        height: 25px;
+    }
+    /*forward and back buttons*/
+    .navbutton {
+        margin-top: 2px;
+    }
+    /*general nav buttons*/
+    .goog-imageless-button, .navbuttonouter {
+        height: 22px;
+        line-height: 22px;
+    }
+    /*settings gear*/
+    #mg-settings .goog-imageless-button-outer-box {
+        top: 3px;
+    }
+}
