@@ -3,7 +3,7 @@ A simple chrome extension to slim up the google calendar interface and put more 
 
 The biggest improvement, in my opinion, is that you can now hide the google calendar sidebar!
 
-To build css use `sass --watch styles/:.`
+To build css use `sass --watch stylesheets/:.`
 
 ### TODO:
 * New Icon
