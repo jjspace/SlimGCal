@@ -1,5 +1,7 @@
+$barsections: 'gb_jf'; //#onegoogbar > div > div:first-child
+
 #onegoogbar {
-    .gb_ff {
+    .#{$barsections} {
         height: 30px;
         > .gb_R {
             height: 30px;

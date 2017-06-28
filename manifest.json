@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Slim gCal",
-	"version": "0.0.1",
+	"version": "0.0.2",
 
 	"description": "An extension to clean up the gCal interface and make the calendar more of a focus",
 
