@@ -31,3 +31,7 @@ SlimGCal.zip: build manifest.json
 	zip -r $@ $(BUILD_DIR) manifest.json
 
 package: SlimGCal.zip
+
+clean: 
+	rm -rf $(BUILD_DIR)
+	rm SlimGCal.zip

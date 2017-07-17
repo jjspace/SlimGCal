@@ -10,6 +10,7 @@ To:                    | Run Command:
 Build everything       | `make` or `make build`
 Package the Zip        | `make package`
 Run sass in watch mode | `make sass-watch`
+Clean up files         | `make clean`
 
 ### TODO:
 * New Icon
