@@ -1,17 +1,30 @@
-BUILD_DIR = .
+BUILD_DIR = dist
 SASS_SRC = stylesheets
 JS_SRC = js
-OUTSTYLE = -t compact
+CSS_STYLE = -t compact
 
 .PHONY: build build-watch package
 
 default: build
 
-build: $(SASS_SRC)/main.scss
-	sass $(OUTSTYLE) $< $(BUILD_DIR)/main.css
+$(BUILD_DIR): 
+	mkdir -p $@
+
+load.min.js: $(BUILD_DIR) $(JS_SRC)/load.js
+	uglifyjs -o $(BUILD_DIR)/$@ $(word 2,$^)
+
+gCal.min.js: $(BUILD_DIR) $(JS_SRC)/gCal.js
+	uglifyjs -o $(BUILD_DIR)/$@ $(word 2,$^)
+
+main.css: $(BUILD_DIR) $(SASS_SRC)/main.scss
+	sass $(CSS_STYLE) $(word 2,$^) $(BUILD_DIR)/$@
+
+build: main.css load.min.js gCal.min.js
 
 build-watch: 
-	sass $(OUTSTYLE) --watch $(SASS_SRC)/:$(BUILD_DIR)
+	sass $(CSS_STYLE) --watch $(SASS_SRC)/:$(BUILD_DIR)
 
-package: gCal.js load.js main.css manifest.json
-	zip SlimGCal $?
+SlimGCal.zip: build manifest.json
+	zip -r $@ $^
+
+package: SlimGCal.zip

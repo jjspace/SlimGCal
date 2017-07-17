@@ -5,3 +5,5 @@
 main\.css
 
 *.zip
+
+dist/
