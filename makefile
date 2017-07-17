@@ -28,6 +28,6 @@ sass-watch:
 	sass $(CSS_STYLE) --watch $(SASS_SRC)/:$(BUILD_DIR)
 
 SlimGCal.zip: build manifest.json
-	zip -r $@ $^
+	zip -r $@ $(BUILD_DIR) manifest.json
 
 package: SlimGCal.zip
