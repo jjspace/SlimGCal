@@ -14,14 +14,14 @@
 	"content_scripts": [
 		{
 			"matches": ["https://calendar.google.com/*"],
-			"js": ["load.js"],
+			"js": ["dist/load.min.js"],
 			"css":[
-					"main.css" 
+					"dist/main.css" 
 			]
 		}
 	],
 
 	"web_accessible_resources": [
-		"gCal.js"
+		"dist/gCal.min.js"
 	]
 }

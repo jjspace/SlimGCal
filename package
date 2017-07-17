@@ -1,2 +1,0 @@
-#! /bin/bash
-zip SlimGCal gCal.js load.js main.css manifest.json

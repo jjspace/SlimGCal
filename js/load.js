@@ -1,6 +1,6 @@
 let s = document.createElement('script');
 
-s.src = chrome.extension.getURL('gCal.js');
+s.src = chrome.extension.getURL('dist/gCal.min.js');
 s.onload = function() {
 	this.remove();
 };
