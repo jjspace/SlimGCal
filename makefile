@@ -10,19 +10,16 @@ default: build
 $(BUILD_DIR): 
 	mkdir -p $@
 
-load.min.js: $(BUILD_DIR)/load.min.js
-$(BUILD_DIR)/load.min.js: $(BUILD_DIR) $(JS_SRC)/load.js
-	uglifyjs -o $@ $(word 2,$^)
+load.min.js: $(JS_SRC)/load.js | $(BUILD_DIR) 
+	uglifyjs -o $(addprefix $(BUILD_DIR)/, $@) $<
 
-gCal.min.js: $(BUILD_DIR)/gCal.min.js
-$(BUILD_DIR)/gCal.min.js: $(BUILD_DIR) $(JS_SRC)/gCal.js
-	uglifyjs -o $@ $(word 2,$^)
+gCal.min.js: $(JS_SRC)/gCal.js | $(BUILD_DIR)
+	uglifyjs -o $(addprefix $(BUILD_DIR)/, $@) $<
 
-main.css: $(BUILD_DIR)/main.css
-$(BUILD_DIR)/main.css: $(BUILD_DIR) $(SASS_SRC)/main.scss
-	sass $(CSS_STYLE) $(word 2,$^) $@
+main.css: $(SASS_SRC)/main.scss | $(BUILD_DIR)
+	sass $(CSS_STYLE) $< $(addprefix $(BUILD_DIR)/, $@)
 
-build: $(BUILD_DIR) main.css load.min.js gCal.min.js
+build: main.css load.min.js gCal.min.js
 
 sass-watch: 
 	sass $(CSS_STYLE) --watch $(SASS_SRC)/:$(BUILD_DIR)
@@ -33,5 +30,5 @@ SlimGCal.zip: build manifest.json
 package: SlimGCal.zip
 
 clean: 
-	rm -rf $(BUILD_DIR)
-	rm SlimGCal.zip
+	-@rm -rf $(BUILD_DIR) 2>/dev/null || true
+	-@rm SlimGCal.zip 2>/dev/null || true
