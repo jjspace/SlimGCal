@@ -1,5 +1,7 @@
 $barsections: 'gb_lg'; //#onegoogbar > div > div:first-child
 //previous values: gb_lf
+$avatar: 'gb_7a'; //avatar image
+//past values gb_8a
 
 #onegoogbar {
     .#{$barsections} {
@@ -10,7 +12,7 @@ $barsections: 'gb_lg'; //#onegoogbar > div > div:first-child
         }
     }
     /*profile avatar*/
-    .gb_8a {
+    .#{$avatar} {
         -webkit-background-size: 20px 20px;
         background-size: 20px 20px;
         height: 20px;
