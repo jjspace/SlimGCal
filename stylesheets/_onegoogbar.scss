@@ -1,4 +1,5 @@
-$barsections: 'gb_lf'; //#onegoogbar > div > div:first-child
+$barsections: 'gb_lg'; //#onegoogbar > div > div:first-child
+//previous values: gb_lf
 
 #onegoogbar {
     .#{$barsections} {
